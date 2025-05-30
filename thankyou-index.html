@@ -65,7 +65,13 @@
     <h1>✅ Thank You!</h1>
     <p>Your order has been received successfully.</p>
     <p>We'll contact you as soon as possible to confirm your order.</p>
-   <button onclick="window.close()">Close Page</button>
+  <button onclick="
+  if (window.opener) {
+    window.close();
+  } else {
+    window.location.href = 'index.html';
+  }
+">Back to Home</button>
 
   </div>
 
